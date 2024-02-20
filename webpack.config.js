@@ -21,6 +21,7 @@ module.exports = (env, argv) => {
 				return `${filepath}/[name].[hash][ext][query]`;
 			},
 			clean: true,
+			publicPath: '/'
 		},
 		performance: {
 			hints: false,

@@ -1,11 +1,12 @@
+import { useContext } from 'react';
 import Button from '../../Button/Button';
+import { CountContext, SetCountContext } from '../Counter';
 
-type ButtonMinusProps = {
-	setCount: React.Dispatch<React.SetStateAction<number>>;
-	count: number
-}
+const ButtonMinus = () => {
+	const count = useContext(CountContext);
+	// const setCount = useContext(SetCountContext) as React.Dispatch<React.SetStateAction<number>>;
+	const setCount = useContext(SetCountContext)!;
 
-const ButtonMinus = ({ setCount, count }: ButtonMinusProps) => {
 	const handleMinus = () => {
 		setCount(count - 1);
 		setCount(count - 1);
